@@ -1,0 +1,41 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "customElements": "writable",
+    "HTMLImports": "writable",
+    "Polymer": "writable",
+    "ShadyDOM": "writable",
+    "ShadyCSS": "writable",
+    "JSCompiler_renameProperty": "writable"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "tsconfigRootDir": ".",
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": ["@typescript-eslint", "html"],
+  "rules": {
+    "no-var": "error",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-duplicate-imports": "error",
+    "eqeqeq": "error",
+    "no-shadow": "error",
+    "prefer-const": "error",
+    "import/named": "off",
+    "import/namespace": "off",
+    "import/default": "off",
+    "import/no-named-as-default-member": "off"
+  },
+  "reportUnusedDisableDirectives": true
+}
